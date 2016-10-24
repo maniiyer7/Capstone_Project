@@ -27,3 +27,24 @@ for name in new_state_name:
     # vars() - Returns dictionary with Keys as its variable names and the dict_values as its values.
     vars()[key] = value
     print name  
+
+# Replacing " . " with Nan and removing rows with Nan
+
+bank_data['Affluence Grade'].replace('.', np.nan, inplace=True)
+bank_data.dropna(subset=['Affluence Grade'], inplace=True)
+
+# Replacing " . " with Nan and removing rows with Nan
+
+bank_data['Loyalty Card Tenure'].replace('.', np.nan, inplace=True)
+bank_data.dropna(subset=['Loyalty Card Tenure'], inplace=True)
+
+# Replacing " . " with Nan and removing rows with Nan
+
+bank_data['No_of_Transactions'].replace('U', np.nan, inplace=True)
+bank_data.dropna(subset=['No_of_Transactions'], inplace=True)
+
+# Replacing " . " with Nan and removing rows with Nan
+
+bank_data['Gender'].replace('U', np.nan, inplace=True)
+bank_data.dropna(subset=['Gender'], inplace=True)
+
