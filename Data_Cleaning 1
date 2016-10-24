@@ -1,0 +1,29 @@
+import pandas as pd
+import numpy as np
+
+# Reading excel file through Pandas
+
+bank_data=pd.read_excel("SampleDataSet.xlsx")
+
+# Getting the Unique State names and storing them in new_state_name
+
+new_state_name=bank_data.State.unique()
+print new_state_name
+print type(new_state_name)
+
+# Store state_name as key
+# Store state_name values as value
+
+key=None
+value=None
+
+# This code will seperate each state and its data into new data frame which will be further used for data cleaning.
+
+for name in new_state_name:
+    key=name
+    value=state_data.get_group(name)
+    name={"state":key,"value":value}
+    # Create the state_name as dynamic variable name and store its values
+    # vars() - Returns dictionary with Keys as its variable names and the dict_values as its values.
+    vars()[key] = value
+    print name  
